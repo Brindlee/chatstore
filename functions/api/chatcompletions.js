@@ -22,11 +22,11 @@ const getData = async (data) => {
 	}
 }
 
-export async function onRequest(context) {
-    console.log('request json: ', context.request.json());
-    console.log('model:',context.request.body.model);
-    console.log('messages:',context.request.body.messages);
-    var reqData = JSON.stringify({model:context.request.body.model, messages : context.request.body.messages});
+export async function onRequestPost({request, env}) {
+    console.log('request json: ', request.json());
+    console.log('model:',request.body.model);
+    console.log('messages:',request.body.messages);
+    var reqData = JSON.stringify({model:request.body.model, messages : request.body.messages});
 	try {
 	  const resp = await getData(reqData);
 	  return new Response(JSON.stringify(resp.data));

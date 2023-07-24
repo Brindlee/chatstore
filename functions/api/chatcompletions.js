@@ -31,7 +31,7 @@ console.log(' body 1',reqbody);
     var reqData = JSON.stringify({model:reqbody.model, messages : reqbody.messages});
 	try {
 	  const resp = await getData(reqData,env);
-	  console.log('resp: ', resp.json());
+	  console.log('resp: ', JSON.stringify(await resp.json()));
 	  //return new Response(JSON.stringify(resp.json()));
 	  return new Response('test');
 	  //res.send(resp.data);

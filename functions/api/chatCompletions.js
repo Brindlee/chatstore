@@ -27,7 +27,7 @@ export async function onRequest(context) {
     var reqData = JSON.stringify({model:context.request.body.model, messages : context.request.body.messages});
 	try {
 	  const resp = await getData(reqData);
-	  return new Response(JSON.stringify(resp.data, null, 2));
+	  return new Response(JSON.stringify(resp.data));
 	  //res.send(resp.data);
 	} catch (e) {
 	  //wrap your error object and send it

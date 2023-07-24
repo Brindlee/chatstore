@@ -23,7 +23,9 @@ const getData = async (data) => {
 }
 
 export async function onRequestPost({request, env}) {
-    console.log('request body: ', request.body);
+    let bodyObject = Object.fromEntries(request.body);
+let requestbody = JSON.stringify(bodyObject, null, 2);
+console.log(`Request body: ${requestbody}`);
     console.log('model:',request.body.model);
     console.log('messages:',request.body.messages);
     var reqData = JSON.stringify({model:request.body.model, messages : request.body.messages});

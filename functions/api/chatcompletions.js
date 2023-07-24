@@ -8,7 +8,7 @@ const getData = async (data) => {
 		"Content-Type": "application/json",
 		//Authorization: `Bearer ${import.meta.env.OPENAI_API_KEY}`,
 		Authorization:
-		  "Bearer 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",
+		  "Bearer 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",
 	  },
 	  body: data,
 	};

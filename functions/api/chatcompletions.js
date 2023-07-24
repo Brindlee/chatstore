@@ -1,4 +1,3 @@
-import axios from 'axios'
 const getData = async (data) => {
 	console.log('req body', data);
     const url = "https://api.openai.com/v1/chat/completions";
@@ -24,6 +23,7 @@ const getData = async (data) => {
 }
 
 export async function onRequest(context) {
+    console.log('request json: ', context.request.json());
     console.log('model:',context.request.body.model);
     console.log('messages:',context.request.body.messages);
     var reqData = JSON.stringify({model:context.request.body.model, messages : context.request.body.messages});

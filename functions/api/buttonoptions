@@ -1,5 +1,5 @@
 export function onRequest(context) {
-    return new Response('test buttons');
+    //return new Response('test buttons');
     const buttonOptions = {
         questionText : "What do you like",
         buttons : [
@@ -17,5 +17,5 @@ export function onRequest(context) {
             }
         ]
     }
-    return new Response(JSON.stringify(buttonOptions, null, 2));
+    return new Response(JSON.stringify(buttonOptions));
 }

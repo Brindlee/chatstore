@@ -6,9 +6,7 @@ const getData = async (data) => {
 	  
 	  headers: {
 		"Content-Type": "application/json",
-		//Authorization: `Bearer ${import.meta.env.OPENAI_API_KEY}`,
-		Authorization: "Bearer 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",
-        "OpenAI-Organization": "org-YQLk2edO3q48OWG8mtgl17d7"
+		Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`
 	  },
 	  body: data,
 	};

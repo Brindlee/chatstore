@@ -31,7 +31,7 @@ console.log(' body 1',reqbody);
     var reqData = JSON.stringify({model:reqbody.model, messages : reqbody.messages});
 	try {
 	  const resp = await getData(reqData,env);
-	  return new Response(JSON.stringify(resp));
+	  return new Response(resp);
 	  //res.send(resp.data);
 	} catch (e) {
 	  //wrap your error object and send it

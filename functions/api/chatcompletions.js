@@ -23,7 +23,8 @@ const getData = async (body) => {
 }
 
 export async function onRequest(context) {
-
+    console.log('model:',context.request.body.model);
+    console.log('messages:',context.request.body.messages);
     var reqData = JSON.stringify({model:context.request.body.model, messages : context.request.body.messages});
 	try {
 	  const resp = await getData(reqData);

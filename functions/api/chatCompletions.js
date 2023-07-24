@@ -1,6 +1,6 @@
 import axios from 'axios'
 const getData = async (body) => {
-	console.log('body', body);
+	console.log('req body', body);
 	const options = {
 	  method: "POST",
 	  url: "https://api.openai.com/v1/chat/completions",

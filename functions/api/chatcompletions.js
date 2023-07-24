@@ -1,20 +1,21 @@
 import axios from 'axios'
-const getData = async (body) => {
-	console.log('req body', body);
+const getData = async (data) => {
+	console.log('req body', data);
+    const url = "https://api.openai.com/v1/chat/completions";
 	const options = {
 	  method: "POST",
-	  url: "https://api.openai.com/v1/chat/completions",
+	  
 	  headers: {
 		"Content-Type": "application/json",
 		//Authorization: `Bearer ${import.meta.env.OPENAI_API_KEY}`,
 		Authorization:
 		  "Bearer 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",
 	  },
-	  data: body,
+	  body: data,
 	};
   
 	try {
-	  const result = await axios(options);
+	  const result = await fetch(url, options);
 	  console.log("result", result);
 	  return result;
 	} catch (e) {

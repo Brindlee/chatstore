@@ -1,4 +1,4 @@
-const getData = async (data) => {
+const getData = async (data,env) => {
 	console.log('req body', data);
     const url = "https://api.openai.com/v1/chat/completions";
 	const options = {
@@ -6,7 +6,7 @@ const getData = async (data) => {
 	  
 	  headers: {
 		"Content-Type": "application/json",
-		Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`
+		Authorization: `Bearer ${env.OPENAI_API_KEY}`
 	  },
 	  body: data,
 	};
@@ -30,7 +30,7 @@ console.log(' body 1',reqbody);
     console.log('messages:', reqbody.messages);
     var reqData = JSON.stringify({model:reqbody.model, messages : reqbody.messages});
 	try {
-	  const resp = await getData(reqData);
+	  const resp = await getData(reqData,env);
 	  return new Response(JSON.stringify(resp.data));
 	  //res.send(resp.data);
 	} catch (e) {

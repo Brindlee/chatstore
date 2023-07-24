@@ -22,7 +22,7 @@ export default {
         }
     },
     getButtonOptions : async function getButtonOptions() {
-        var url = '/api/buttonOptions'
+        var url = '/api/buttonoptions'
         try {
             const response = await axios.get(url);
             console.log(response);

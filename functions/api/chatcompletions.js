@@ -23,7 +23,7 @@ const getData = async (data) => {
 }
 
 export async function onRequestPost({request, env}) {
-    console.log('request json: ', request.json());
+    console.log('request body: ', request.body);
     console.log('model:',request.body.model);
     console.log('messages:',request.body.messages);
     var reqData = JSON.stringify({model:request.body.model, messages : request.body.messages});

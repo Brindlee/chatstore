@@ -25,7 +25,7 @@ const getData = async (data) => {
 export async function onRequestPost({request, env}) {
    // let bodyObject = Object.fromEntries(request.body);
 //let requestbody = JSON.stringify(bodyObject, null, 2);
-console.log('req body 1',await request.text());
+console.log('req body 2',await request.text());
 const reqbody = await request.json()
 console.log(' body 1',reqbody);
     console.log('model:', reqbody.model);

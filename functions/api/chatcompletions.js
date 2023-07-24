@@ -26,11 +26,11 @@ export async function onRequestPost({request, env}) {
    // let bodyObject = Object.fromEntries(request.body);
 //let requestbody = JSON.stringify(bodyObject, null, 2);
 console.log('req body 1',await request.text());
-const body = await request.json()
-console.log(' body 1',body);
-    console.log('model:', body.model);
-    console.log('messages:', body.messages);
-    var reqData = JSON.stringify({model:body.model, messages : body.messages});
+const reqbody = await request.json()
+console.log(' body 1',reqbody);
+    console.log('model:', reqbody.model);
+    console.log('messages:', reqbody.messages);
+    var reqData = JSON.stringify({model:reqbody.model, messages : reqbody.messages});
 	try {
 	  const resp = await getData(reqData);
 	  return new Response(JSON.stringify(resp.data));

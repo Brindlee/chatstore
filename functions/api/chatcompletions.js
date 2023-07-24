@@ -25,10 +25,12 @@ const getData = async (data) => {
 export async function onRequestPost({request, env}) {
    // let bodyObject = Object.fromEntries(request.body);
 //let requestbody = JSON.stringify(bodyObject, null, 2);
-console.log('req body 1',await request.text())
-    console.log('model:',await request.model);
-    console.log('messages:',await request.messages);
-    var reqData = JSON.stringify({model:request.model, messages : request.messages});
+console.log('req body 1',await request.text());
+const body = await request.json()
+console.log(' body 1',body);
+    console.log('model:', body.model);
+    console.log('messages:', body.messages);
+    var reqData = JSON.stringify({model:body.model, messages : body.messages});
 	try {
 	  const resp = await getData(reqData);
 	  return new Response(JSON.stringify(resp.data));

@@ -26,9 +26,9 @@ export async function onRequestPost({request, env}) {
    // let bodyObject = Object.fromEntries(request.body);
 //let requestbody = JSON.stringify(bodyObject, null, 2);
 console.log('req body 1',await request.text())
-    console.log('model:',request.body.model);
-    console.log('messages:',request.body.messages);
-    var reqData = JSON.stringify({model:request.body.model, messages : request.body.messages});
+    console.log('model:',request.model);
+    console.log('messages:',request.messages);
+    var reqData = JSON.stringify({model:request.model, messages : request.messages});
 	try {
 	  const resp = await getData(reqData);
 	  return new Response(JSON.stringify(resp.data));

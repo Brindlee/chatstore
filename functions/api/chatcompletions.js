@@ -32,7 +32,7 @@ console.log(' body 1',reqbody);
 	try {
 	  const resp = await getData(reqData,env);
 	  console.log('resp: ', JSON.stringify(await resp.json()));
-	  return new Response(JSON.stringify(await resp.json()));
+	  return new Response(JSON.stringify(resp.json()));
 	  //res.send(resp.data);
 	} catch (e) {
 	  //wrap your error object and send it

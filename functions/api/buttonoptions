@@ -16,5 +16,5 @@ export async function onRequest(context) {
             }
         ]
     }
-    return new Response(JSON.stringify(buttonOptions, null, 2));s
+    return new Response(JSON.stringify(buttonOptions, null, 2));
 }

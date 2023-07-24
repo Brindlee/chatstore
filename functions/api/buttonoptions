@@ -1,4 +1,4 @@
-export async function onRequest(context) {
+export function onRequest(context) {
     const buttonOptions = {
         questionText : "What do you like",
         buttons : [

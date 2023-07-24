@@ -15,7 +15,7 @@ const getData = async (data) => {
   
 	try {
 	  const result = await fetch(url, options);
-	  console.log("result", JSON.stringify(result));
+	  console.log("result", await result.text()      );
 	  return result;
 	} catch (e) {
 	  console.log(e);

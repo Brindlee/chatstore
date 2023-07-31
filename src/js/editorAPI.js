@@ -9,17 +9,17 @@ export default {
     deployWorkerToCloudeflare  : async function deployWorkerToCloudeflare() {
         var url = '/api/deploycloudflareworker'
         try {
-            const blob = new Blob([codeStore.code], {type : 'text/javascript'})
+            const blob = new Blob([codeStore.code], {type : "application/javascript+module"})
             const formDt = new FormData();
-            formDt.append('worker.js', blob, 'worker.js')
+            formDt.append("worker.js", blob, "worker.js")
             const metadata = {
                 "main_module" : "worker.js"
             }
             var headersObj = {
                 "Content-Type": "multipart/form-data"
             }
-            formDt.append('metadata', metadata)
-            const response = await axios.put(url,formDt, {headers : headersObj})
+            formDt.append("metadata", metadata)
+            const response = await axios.put(url,formDt)
             console.log(response);
             return response.data;
         } catch (error) {

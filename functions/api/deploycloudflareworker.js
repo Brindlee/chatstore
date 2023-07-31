@@ -6,7 +6,7 @@ const getData = async (data,env) => {
 	  method: "PUT",
 	  
 	  headers: {
-		"Content-Type": "multipart/form-data",
+		//"Content-Type": "multipart/form-data",
         "X-Auth-Email" : `${env.CLOUDFLARE_AUTH_EMAIL}`,
         "X-Auth-Key" : `${env.CLOUDFLARE_AUTH_KEY}`
 	  },
@@ -31,7 +31,8 @@ export async function onRequestPut({request, env}) {
 	  //const resp = await getData(reqData,env);
       const resp = await getData(reqbody,env);
       
-	  return new Response( JSON.stringify(await resp.json()));
+	  //return new Response( JSON.stringify(await resp.json()));
+	  return new Response( JSON.stringify(await resp.text()));
 	} catch (e) {
 	  //wrap your error object and send it
 	  console.log("error: ", e);

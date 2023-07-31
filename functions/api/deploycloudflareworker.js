@@ -1,6 +1,6 @@
 const getData = async (data,env) => {
 	console.log('req body', data);
-	console.log('env', env.ENVIRONMENT);
+	console.log('env cf account key', env.CLOUDFLARE_ACCOUNT_KEY);
     const url = `https://api.cloudflare.com/client/v4/accounts/${env.CLOUDFLARE_ACCOUNT_KEY}/workers/scripts/zapierworker`; //worker name dynamic
 	const options = {
 	  method: "POST",

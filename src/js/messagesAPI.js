@@ -3,6 +3,7 @@ import axios from 'axios'
 //default export
 export default {
     getChatCompletions  : async function getChatCompletions( messages) {
+        console.log('in messagesapi getChatCompletions');
         var url = '/api/chatcompletions'
         var clonnedMessages = JSON.parse(JSON.stringify(messages));
         clonnedMessages.forEach(object => {

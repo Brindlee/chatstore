@@ -18,7 +18,7 @@ export default {
             var headersObj = {
                 "Content-Type": "multipart/form-data"
             }
-            formDt.append("metadata", metadata)
+            formDt.append("metadata", JSON.stringify(metadata))
             const response = await axios.put(url,formDt)
             console.log(response);
             return response.data;

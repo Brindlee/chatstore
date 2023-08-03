@@ -5,11 +5,11 @@ import editorAPI from '@/js/editorAPI.js'
 import { VAceEditor } from 'vue3-ace-editor';
 import ace from 'ace-builds';
 
-import modeJavascriptUrl from 'ace-builds/src-noconflict/mode-javascript?url';
+/*import modeJavascriptUrl from 'ace-builds/src-noconflict/mode-javascript?url';
 ace.config.setModuleUrl('ace/mode/javascript', modeJavascriptUrl);
 
 import themeChromeUrl from 'ace-builds/src-noconflict/theme-chrome?url';
-ace.config.setModuleUrl('ace/theme/chrome', themeChromeUrl);
+ace.config.setModuleUrl('ace/theme/chrome', themeChromeUrl);*/
 
 const codeStore = useCodeStore(pinia);
 function deployWorkerToCloudeflare() {

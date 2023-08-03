@@ -5,9 +5,39 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  define: {
+    "global": {},
+  },
   plugins: [
-    vue(),
+    vue({
+      template: {
+          compilerOptions: {
+              isCustomElement: (tag) => tag.includes('the-widget')
+          }
+      }
+    }),
   ],
+  build: {
+    lib: {
+        entry: './src/AppEntry.ce.js',
+        name: 'the-widget',
+        // the proper extensions will be added
+        fileName: 'the-widget',
+        formats: [ /*'es', 'umd', */ 'cjs']
+    },
+    rollupOptions: {
+        // make sure to externalize deps that shouldn't be bundled
+        // into your library
+        external: ['vue3-ace-editor'],
+        /*output: {
+            // Provide global variables to use in the UMD build
+            // for externalized deps
+            globals: {
+                vue: 'Vue',
+            },
+        },*/
+    }
+},
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

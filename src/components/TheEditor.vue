@@ -50,7 +50,7 @@ function editorInit() {
     <button @click="previewApp">Preview App</button>
     <input v-model="codeStore.name" placeholder="Type File Name" />
     <!--<textarea v-model="codeStore.code"></textarea>-->
-    <v-ace-editor
+    <VAceEditor
     v-model:value="codeStore.code"
     @init="editorInit"
     lang="javascrpt"

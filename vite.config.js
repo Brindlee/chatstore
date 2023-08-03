@@ -22,18 +22,18 @@ export default defineConfig({
         fileName: 'the-widget',
         formats: [ /*'es', 'umd', */ 'cjs']
     },
-    rollupOptions: {
+    /*rollupOptions: {
         // make sure to externalize deps that shouldn't be bundled
         // into your library
-        external: ['vue3-ace-editor', 'ace-builds'],
-        /*output: {
+        external: ['vue'],
+        output: {
             // Provide global variables to use in the UMD build
             // for externalized deps
             globals: {
                 vue: 'Vue',
             },
-        },*/
-    }
+        },
+    }*/
 },
   resolve: {
     alias: {

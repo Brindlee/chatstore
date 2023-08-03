@@ -14,7 +14,7 @@ export async function onRequestPost({request, env}) {
 			endpoint: `https://${env.R2_ACCOUNT_KEY}.r2.cloudflarestorage.com`,
 			credentials: {
 			  accessKeyId: env.R2_AUTH_KEY_ID,
-			  secretAccessKey: env.R2_AUTH_KEY_SECRET
+			  secretAccessKey: env.R2_AUTH_KEY_SECRET,
 			},
 		  });
 		  //return new Response('hi there');

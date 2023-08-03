@@ -15,13 +15,13 @@ export default defineConfig({
     }),
   ],
   build: {
-    lib: {
+    /*lib: {
         entry: './src/AppEntry.ce.js',
         name: 'the-widget',
         // the proper extensions will be added
         fileName: 'the-widget',
-        formats: [ /*'es', 'umd', */ 'cjs']
-    },
+        formats: [  'cjs']
+    },*/
     /*rollupOptions: {
         // make sure to externalize deps that shouldn't be bundled
         // into your library

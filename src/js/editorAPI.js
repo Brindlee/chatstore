@@ -52,7 +52,7 @@ export default {
         }
     },
     listR2Objects : async function getR2File() {
-        var url = '/api/listR2Objects'
+        var url = '/api/listR2Objects';
        
             /*const s3 = new S3({
                 endpoint: `https://${import.meta.env.VITE_R2_ACCOUNT_KEY}.r2.cloudflarestorage.com`,

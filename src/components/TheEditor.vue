@@ -41,7 +41,7 @@ function previewApp() {
 }
 
 function editorInit() {
-
+    console.log('editor init');
 }
 </script>
 <template>

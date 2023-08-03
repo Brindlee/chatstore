@@ -4,7 +4,7 @@ import {useCodeStore} from '@/stores/code'
 import editorAPI from '@/js/editorAPI.js'
 import { onMounted } from 'vue'
 
-const codeStore = useCodeStore(pinia);
+//const codeStore = useCodeStore(pinia);
 onMounted(() => {
     editorAPI.listR2Objects().then((data) => {
         console.log('response: ',data);

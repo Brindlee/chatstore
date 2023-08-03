@@ -3,7 +3,7 @@ const getData = async (data,env) => {
 	console.log('env', env.ENVIRONMENT);
     const url = 'https://worker-r2.integrately.workers.dev/'+data.selectedFile;
 	const options = {
-	  method: "GET",
+	  method: "GET"
 	  
 	 /* headers: {
 		"Content-Type": "application/json",

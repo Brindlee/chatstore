@@ -11,7 +11,7 @@ import TheEditor from './components/TheEditor.vue';
     <ChatInput />
   </div>
   <div class="right-container">
-    <FileExplorer/>
+    <FileExplorer />
     <TheEditor />
   </div>
 </template>

@@ -15,7 +15,7 @@ const getData = async (data,env) => {
 		//"Content-Type": "multipart/form-data",
         "X-Custom-Auth-Key" : `${env.R2_AUTH_KEY_SECRET}`
 	  },
-	  body: data,
+	  body: data
 	};
   
 	try {

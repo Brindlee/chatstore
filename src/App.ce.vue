@@ -1,6 +1,7 @@
 <script setup>
 import ChatInput from './components/ChatInput.vue'
 import ChatMessages from './components/ChatMessages.vue'
+import FileExplorer from './components/FileExplorer.vue';
 import TheEditor from './components/TheEditor.vue';
 </script>
 
@@ -10,6 +11,7 @@ import TheEditor from './components/TheEditor.vue';
     <ChatInput />
   </div>
   <div class="right-container">
+    <FileExplorer/>
     <TheEditor />
   </div>
 </template>
